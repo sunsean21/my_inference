@@ -825,7 +825,7 @@ struct PerformanceSummary {
   };
   // Latency target percentile
   PercentileEntry target_latency_percentile{settings.target_latency_percentile};
-  PercentileEntry latency_percentiles[6] = {{.50}, {.90}, {.95},
+  PercentileEntry latency_percentiles[10] = {{.40}, {.50}, {.60}, {.70}, {.80}, {.90}, {.95},
                                             {.97}, {.99}, {.999}};
 
 #if defined(_WIN32) || defined(WIN32) || defined(_WIN64) || defined(WIN64)
