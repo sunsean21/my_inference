@@ -1,0 +1,8 @@
+defines = -DNO_TCMALLOC -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL -DCHROMIUM_BUILD -D_LIBCPP_HAS_NO_ALIGNED_ALLOCATION -DCR_XCODE_VERSION=1131 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -D_DEBUG -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+include_dirs = -I../.. -Igen
+label_name = loadgen_demos_python
+target_out_dir = obj/loadgen/demos
+target_output_name = loadgen_demos_python
+
+
+build obj/loadgen/demos/loadgen_demos_python.stamp: stamp || obj/loadgen_pymodule_wheel_lib.stamp

@@ -1,0 +1,124 @@
+ninja_required_version = 1.7.2
+
+rule gn
+  command = ../../third_party/gn/gn --root=../.. -q gen .
+  description = Regenerating ninja files
+
+build build.ninja: gn
+  generator = 1
+  depfile = build.ninja.d
+
+pool build_toolchain_action_pool
+  depth = 8
+
+pool build_toolchain_link_pool
+  depth = 2
+
+pool build_toolchain_mac_bundle_pool
+  depth = 2
+
+subninja toolchain.ninja
+
+build gn_all: phony obj/gn_all.stamp
+build loadgen_pymodule_setup_lib: phony obj/loadgen_pymodule_setup_lib.stamp
+build loadgen_pymodule_setup_src: phony obj/loadgen_pymodule_setup_src.stamp
+build loadgen_pymodule_wheel_lib: phony obj/loadgen_pymodule_wheel_lib.stamp
+build loadgen_pymodule_wheel_src: phony obj/loadgen_pymodule_wheel_src.stamp
+build c_api_src: phony obj/loadgen/c_api_src.stamp
+build common_deps: phony obj/build/config/common_deps.stamp
+build deps: phony obj/build/config/sanitizers/deps.stamp
+build doxygen_html_generator_script: phony obj/loadgen/docs/src/doxygen_html_generator_script.stamp
+build executable_deps: phony obj/build/config/executable_deps.stamp
+build generate_doxygen_html: phony obj/loadgen/docs/src/generate_doxygen_html.stamp
+build generate_loadgen_version_header: phony obj/loadgen/generate_loadgen_version_header.stamp
+build lib_src: phony obj/loadgen/lib_src.stamp
+build loadable_module_deps: phony obj/build/config/loadable_module_deps.stamp
+build loadgen_demos_python: phony obj/loadgen/demos/loadgen_demos_python.stamp
+build loadgen_doxygen_sources: phony obj/loadgen/docs/src/loadgen_doxygen_sources.stamp
+build mlperf_loadgen: phony obj/loadgen/libmlperf_loadgen.a
+build mlperf_loadgen_perftests_py: phony obj/loadgen/tests/mlperf_loadgen_perftests_py.stamp
+build mlperf_loadgen_pymodule_lib: phony ./mlperf_loadgen_pymodule_lib.so
+build mlperf_loadgen_sources_no_gen: phony obj/loadgen/mlperf_loadgen_sources_no_gen.stamp
+build mlperf_loadgen_tests_loadgen_test_main: phony obj/loadgen/tests/libmlperf_loadgen_tests_loadgen_test_main.a
+build options_sources: phony obj/build/config/sanitizers/liboptions_sources.a
+build posix: phony obj/build/config/posix/posix.stamp
+build public_headers_src: phony obj/loadgen/public_headers_src.stamp
+build pybind11: phony obj/third_party/pybind11.stamp
+build pybind_src: phony obj/third_party/pybind_src.stamp
+build python_api_src: phony obj/loadgen/python_api_src.stamp
+build setup_py_script: phony obj/loadgen/setup_py_script.stamp
+build shared_library_deps: phony obj/build/config/shared_library_deps.stamp
+build version_generator_script: phony obj/loadgen/version_generator_script.stamp
+build $:gn_all: phony obj/gn_all.stamp
+build $:loadgen_pymodule_setup_lib: phony obj/loadgen_pymodule_setup_lib.stamp
+build $:loadgen_pymodule_setup_src: phony obj/loadgen_pymodule_setup_src.stamp
+build $:loadgen_pymodule_wheel_lib: phony obj/loadgen_pymodule_wheel_lib.stamp
+build $:loadgen_pymodule_wheel_src: phony obj/loadgen_pymodule_wheel_src.stamp
+build build/config$:common_deps: phony obj/build/config/common_deps.stamp
+build build/config$:executable_deps: phony obj/build/config/executable_deps.stamp
+build build/config$:loadable_module_deps: phony obj/build/config/loadable_module_deps.stamp
+build build/config$:shared_library_deps: phony obj/build/config/shared_library_deps.stamp
+build build/config/posix$:posix: phony obj/build/config/posix/posix.stamp
+build build/config/posix: phony obj/build/config/posix/posix.stamp
+build build/config/sanitizers$:deps: phony obj/build/config/sanitizers/deps.stamp
+build build/config/sanitizers$:options_sources: phony obj/build/config/sanitizers/liboptions_sources.a
+build loadgen$:c_api_src: phony obj/loadgen/c_api_src.stamp
+build loadgen$:docs: phony obj/loadgen/docs.stamp
+build loadgen$:generate_loadgen_version_header: phony obj/loadgen/generate_loadgen_version_header.stamp
+build loadgen$:lib_src: phony obj/loadgen/lib_src.stamp
+build loadgen$:mlperf_loadgen: phony obj/loadgen/libmlperf_loadgen.a
+build loadgen$:mlperf_loadgen_pymodule_lib: phony ./mlperf_loadgen_pymodule_lib.so
+build loadgen$:mlperf_loadgen_sources_no_gen: phony obj/loadgen/mlperf_loadgen_sources_no_gen.stamp
+build loadgen$:public_headers_src: phony obj/loadgen/public_headers_src.stamp
+build loadgen$:python_api_src: phony obj/loadgen/python_api_src.stamp
+build loadgen$:setup_py_script: phony obj/loadgen/setup_py_script.stamp
+build loadgen$:version_generator_script: phony obj/loadgen/version_generator_script.stamp
+build loadgen/demos$:loadgen_demos_python: phony obj/loadgen/demos/loadgen_demos_python.stamp
+build loadgen/docs/src$:doxygen_html_generator_script: phony obj/loadgen/docs/src/doxygen_html_generator_script.stamp
+build loadgen/docs/src$:generate_doxygen_html: phony obj/loadgen/docs/src/generate_doxygen_html.stamp
+build loadgen/docs/src$:loadgen_doxygen_sources: phony obj/loadgen/docs/src/loadgen_doxygen_sources.stamp
+build loadgen/tests$:docs: phony obj/loadgen/tests/docs.stamp
+build loadgen/tests$:mlperf_loadgen_perftests: phony ./mlperf_loadgen_perftests
+build loadgen/tests$:mlperf_loadgen_perftests_py: phony obj/loadgen/tests/mlperf_loadgen_perftests_py.stamp
+build loadgen/tests$:mlperf_loadgen_tests_basic: phony ./mlperf_loadgen_tests_basic
+build loadgen/tests$:mlperf_loadgen_tests_loadgen_test_main: phony obj/loadgen/tests/libmlperf_loadgen_tests_loadgen_test_main.a
+build third_party$:pybind11: phony obj/third_party/pybind11.stamp
+build third_party$:pybind_src: phony obj/third_party/pybind_src.stamp
+
+build all: phony $
+    obj/gn_all.stamp $
+    obj/loadgen_pymodule_setup_lib.stamp $
+    obj/loadgen_pymodule_setup_src.stamp $
+    obj/loadgen_pymodule_wheel_lib.stamp $
+    obj/loadgen_pymodule_wheel_src.stamp $
+    obj/build/config/common_deps.stamp $
+    obj/build/config/executable_deps.stamp $
+    obj/build/config/loadable_module_deps.stamp $
+    obj/build/config/shared_library_deps.stamp $
+    obj/build/config/posix/posix.stamp $
+    obj/build/config/sanitizers/deps.stamp $
+    obj/build/config/sanitizers/liboptions_sources.a $
+    obj/loadgen/c_api_src.stamp $
+    obj/loadgen/docs.stamp $
+    obj/loadgen/generate_loadgen_version_header.stamp $
+    obj/loadgen/lib_src.stamp $
+    obj/loadgen/libmlperf_loadgen.a $
+    ./mlperf_loadgen_pymodule_lib.so $
+    obj/loadgen/mlperf_loadgen_sources_no_gen.stamp $
+    obj/loadgen/public_headers_src.stamp $
+    obj/loadgen/python_api_src.stamp $
+    obj/loadgen/setup_py_script.stamp $
+    obj/loadgen/version_generator_script.stamp $
+    obj/loadgen/demos/loadgen_demos_python.stamp $
+    obj/loadgen/docs/src/doxygen_html_generator_script.stamp $
+    obj/loadgen/docs/src/generate_doxygen_html.stamp $
+    obj/loadgen/docs/src/loadgen_doxygen_sources.stamp $
+    obj/loadgen/tests/docs.stamp $
+    ./mlperf_loadgen_perftests $
+    obj/loadgen/tests/mlperf_loadgen_perftests_py.stamp $
+    ./mlperf_loadgen_tests_basic $
+    obj/loadgen/tests/libmlperf_loadgen_tests_loadgen_test_main.a $
+    obj/third_party/pybind11.stamp $
+    obj/third_party/pybind_src.stamp
+
+default all

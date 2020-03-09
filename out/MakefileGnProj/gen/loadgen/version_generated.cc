@@ -10,32 +10,39 @@ const std::string& LoadgenVersion() {
 }
 
 const std::string& LoadgenBuildDateLocal() {
-  static const std::string str = "2020-03-08T20:01:45.514065";
+  static const std::string str = "2020-03-09T02:16:29.259678";
   return str;
 }
 
 const std::string& LoadgenBuildDateUtc() {
-  static const std::string str = "2020-03-09T00:01:45.514085";
+  static const std::string str = "2020-03-09T06:16:29.259700";
   return str;
 }
 
 const std::string& LoadgenGitRevision() {
-  static const std::string str = "44722181c5";
+  static const std::string str = "ed6afbec91";
   return str;
 }
 
 const std::string& LoadgenGitCommitDate() {
-  static const std::string str = "2020-03-08T18:39:18-04:00";
+  static const std::string str = "2020-03-09T01:19:12-04:00";
   return str;
 }
 
 const std::string& LoadgenGitStatus() {
-  static const std::string str = R"LGVG_RSLD( M ../../loadgen/demos/py_demo_single_stream.py)LGVG_RSLD";
+  static const std::string str = R"LGVG_RSLD( M ../../loadgen/dist/mlperf_loadgen-0.5a0-cp27-cp27m-macosx_10_14_intel.whl
+ M ../../loadgen/version_generator.py
+ M .ninja_log
+ M gen/loadgen/version_generated.cc)LGVG_RSLD";
   return str;
 }
 
 const std::string& LoadgenGitLog() {
-  static const std::string str = R"LGVG_RSLD(44722181c574defa0ae320aaeeffd4e49350916a modify aaccuracy_log_probability to 100
+  static const std::string str = R"LGVG_RSLD(ed6afbec91bf7dcb461f66ab6adc31f6ca7abb9b test version generator
+c5398af6d4e1f3db8effb039efe31b7e6aa8f49c test version generator
+96f23314812ca06ee5f2cf55438e5b5a1f9e11b7 add version_generated.cc
+553afeb927652cf1a83acccb3f85aeae80f86a88 version update
+44722181c574defa0ae320aaeeffd4e49350916a modify aaccuracy_log_probability to 100
 0ddd25864aa46585e6801988a6180c1f70f5f75a 6to10
 212dd6b03827845b42e950571aa66f935f3af1c9 test
 0691366473fd4fbbc4eb432fad990683a5a87099 Merge pull request #558 from nvpohanh/dev-pohanh-restore-gn
@@ -46,16 +53,13 @@ c811fa52f0389ca98b94198574e4f80b61fb440a Update README.md
 876c6e2e390b188d69675a59a71360ab39007bde support for tf-2.0 (#533)
 37c605b087d060c003e5b47cebc5b12fd3d57ed4 Update README.md
 28115aadab5becd36578517ce96f5e9627845364 Update README.md
-311f017bca643dd72da895896b7afac87c35c29d Update README.md
-65321a839046d1c4bdc202648c5ba26993f4af96 Update README.md
-7a084d39c9324470e489d93c5d4917f13d62bd91 remove assert which blocks runs (#502)
-5047bfd1ac5b34dead6b2e91cd1e58e1e153995f Bump pillow from 5.2.0 to 6.2.0 in /others/cloud/single_stage_detector (#526)
-9acf3fbae88649b22eb4513b211c4fd1131d2b3c Bump werkzeug from 0.14.1 to 0.15.3 in /others/cloud/language_modeling (#524))LGVG_RSLD";
+311f017bca643dd72da895896b7afac87c35c29d Update README.md)LGVG_RSLD";
   return str;
 }
 
 const std::string& LoadgenSha1OfFiles() {
-  static const std::string str = R"LGVG_RSLD(012aad77e5206c89d50718c46c119d1f3cb056b2 /.clang-format
+  static const std::string str = R"LGVG_RSLD(78dcdb4cab5e39c942185ad4b29007ed1cbd30a6 /.DS_Store
+012aad77e5206c89d50718c46c119d1f3cb056b2 /.clang-format
 a3355ff8f163cabbf26adb86d3aa0e5da72900c7 /BUILD.gn
 25ddf9bbe1429de0d036f073497c1e90cb419519 /CMakeLists.txt
 79fbce4843967690e0750fd7ffc021f4f1e4c5c4 /README.md
@@ -88,9 +92,10 @@ e235797e3ebfe620963414940ea550373e366688 /test_settings.h
 1c15731be5abc26a6c90356720146862da7c22b4 /test_settings_internal.h
 86fc4c8035e7b73132c56d1781aca647b6bd6916 /utils.cc
 5395a04f82e90288f52bf918d7b1d6027bfe0964 /utils.h
-e1c46896da912ff2a0187276c3a8ba4eec057a17 /version.cc
+c3f6da54bcbec8ca8547eae9315adc6795be523e /version.cc
 9d574baa64424e9c708fcfedd3dbb0b518a65fcc /version.h
-07dbee77c9707efdb95def65477c288fe6667e92 /version_generator.py
+1748ac8328a34c9af355a5b93fe0382142520ea6 /version_generated.cc
+b3a1b98ee3ef82c811d98a9e33b03726cfd29f75 /version_generator.py
 4861f1777c98ac711a24b194e6b7a9c9285eca52 /version_generator.pyc)LGVG_RSLD";
   return str;
 }

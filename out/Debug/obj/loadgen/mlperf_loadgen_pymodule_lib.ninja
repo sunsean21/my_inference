@@ -1,0 +1,15 @@
+defines = -DNO_TCMALLOC -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL -DCHROMIUM_BUILD -D_LIBCPP_HAS_NO_ALIGNED_ALLOCATION -DCR_XCODE_VERSION=1131 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -D_DEBUG -DDYNAMIC_ANNOTATIONS_ENABLED=1 -DWTF_USE_DYNAMIC_ANNOTATIONS=1
+include_dirs = -I../../loadgen -I/usr/include/x86_64-linux-gnu/python2.7 -I/usr/include/python2.7 -I../.. -Igen -I../../third_party/pybind/include
+cflags = -Wno-macro-redefined -fno-strict-aliasing -fstack-protector-strong -arch x86_64 -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -Wall -Werror -Wunguarded-availability -Wno-unused-local-typedefs -Wno-maybe-uninitialized -Wno-deprecated-declarations -Wno-comments -Wno-missing-field-initializers -Wno-unused-parameter -O0 -fno-omit-frame-pointer -gdwarf-4 -g2 -isysroot ../../../../../../../../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.10.0 -fvisibility=hidden
+cflags_cc = -std=c++14 -stdlib=libc++ -Wno-narrowing -fno-exceptions -fno-rtti -fvisibility-inlines-hidden -frtti -fexceptions
+label_name = mlperf_loadgen_pymodule_lib
+target_out_dir = obj/loadgen
+target_output_name = mlperf_loadgen_pymodule_lib
+
+build obj/loadgen/mlperf_loadgen_pymodule_lib/python_api.o: cxx ../../loadgen/bindings/python_api.cc || obj/loadgen/generate_loadgen_version_header.stamp
+
+build ./mlperf_loadgen_pymodule_lib.so: solink_module obj/loadgen/mlperf_loadgen_pymodule_lib/python_api.o obj/loadgen/libmlperf_loadgen.a || obj/third_party/pybind11.stamp obj/build/config/loadable_module_deps.stamp
+  ldflags = -lpython2.7 -stdlib=libc++ -arch x86_64 -segprot PROTECTED_MEMORY rw r -Werror -isysroot ../../../../../../../../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.10.0 -Wl,-ObjC
+  libs =
+  output_extension = .so
+  output_dir = .
