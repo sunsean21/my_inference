@@ -65,6 +65,9 @@ def flush_queries():
 def process_latencies(latencies_ns):
     print("Average latency: ")
     print(numpy.mean(latencies_ns))
+
+    print("40 percentile latency: ")
+    print(numpy.percentile(latencies_ns, 40))
     print("Median latency: ")
     print(numpy.percentile(latencies_ns, 50))
     print("90 percentile latency: ")

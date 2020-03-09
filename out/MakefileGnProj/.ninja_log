@@ -1,0 +1,4 @@
+# ninja log v5
+0	5	1583712105388487880	obj/loadgen/version_generator_script.stamp	87eb39190cc23cbb
+5	356	1583712105733815144	gen/loadgen/version_generated.cc	973ad23b2747aba2
+356	360	1583712105743164403	obj/loadgen/generate_loadgen_version_header.stamp	1a156fa08ef095e8

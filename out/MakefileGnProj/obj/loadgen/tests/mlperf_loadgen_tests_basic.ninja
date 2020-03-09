@@ -1,0 +1,15 @@
+defines = -DNO_TCMALLOC -DFULL_SAFE_BROWSING -DSAFE_BROWSING_CSD -DSAFE_BROWSING_DB_LOCAL -DCHROMIUM_BUILD -D_LIBCPP_HAS_NO_ALIGNED_ALLOCATION -DCR_XCODE_VERSION=1131 -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D_FORTIFY_SOURCE=2 -D__ASSERT_MACROS_DEFINE_VERSIONS_WITHOUT_UNDERSCORE=0 -DNDEBUG -DNVALGRIND -DDYNAMIC_ANNOTATIONS_ENABLED=0
+include_dirs = -I../.. -Igen
+cflags = -fno-strict-aliasing -fstack-protector -arch x86_64 -Wno-builtin-macro-redefined -D__DATE__= -D__TIME__= -D__TIMESTAMP__= -Wall -Werror -Wunguarded-availability -Wno-unused-local-typedefs -Wno-maybe-uninitialized -Wno-deprecated-declarations -Wno-comments -Wno-missing-field-initializers -Wno-unused-parameter -O2 -fno-omit-frame-pointer -gdwarf-4 -g2 -isysroot ../../../../../../../../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.10.0 -fvisibility=hidden
+cflags_cc = -std=c++14 -stdlib=libc++ -Wno-narrowing -fno-exceptions -fno-rtti -fvisibility-inlines-hidden -fexceptions
+label_name = mlperf_loadgen_tests_basic
+target_out_dir = obj/loadgen/tests
+target_output_name = mlperf_loadgen_tests_basic
+
+build obj/loadgen/tests/mlperf_loadgen_tests_basic/basic.o: cxx ../../loadgen/tests/basic.cc || obj/loadgen/generate_loadgen_version_header.stamp
+
+build ./mlperf_loadgen_tests_basic: link obj/loadgen/tests/mlperf_loadgen_tests_basic/basic.o obj/loadgen/libmlperf_loadgen.a obj/loadgen/tests/libmlperf_loadgen_tests_loadgen_test_main.a || obj/build/config/executable_deps.stamp
+  ldflags = -stdlib=libc++ -arch x86_64 -segprot PROTECTED_MEMORY rw r -Werror -Wl,-dead_strip -isysroot ../../../../../../../../../../Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.10.0 -Wl,-ObjC
+  libs =
+  output_extension = 
+  output_dir = .

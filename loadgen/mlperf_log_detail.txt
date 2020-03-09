@@ -1,0 +1,130 @@
+"pid": 42603, "tid": 7384174836008371343, "ts": 985707ns : LoadgenVersionInfo:
+"pid": 42603, "tid": 7384174836008371343, "ts": 985707ns : version : .5a1 @ 44722181c5
+"pid": 42603, "tid": 7384174836008371343, "ts": 985707ns : build_date_local : 2020-03-08T19:53:17.668842
+"pid": 42603, "tid": 7384174836008371343, "ts": 985707ns : build_date_utc   : 2020-03-08T23:53:17.668853
+"pid": 42603, "tid": 7384174836008371343, "ts": 985707ns : git_commit_date  : 2020-03-08T18:39:18-04:00
+"pid": 42603, "tid": 7384174836008371343, "ts": 985707ns : git_log :
+
+44722181c574defa0ae320aaeeffd4e49350916a modify aaccuracy_log_probability to 100
+0ddd25864aa46585e6801988a6180c1f70f5f75a 6to10
+212dd6b03827845b42e950571aa66f935f3af1c9 test
+0691366473fd4fbbc4eb432fad990683a5a87099 Merge pull request #558 from nvpohanh/dev-pohanh-restore-gn
+50b2f19e785ac34bddc5aac8eee19c15a84a154d Restore gn submodule mistakenly deleted in #515
+16a5661eea8f0545e04c86029362e22113c2ec09 Merge pull request #254 from lji72/master
+cb4d2f32a912f50fa67fd4f48114f4ab5b767a75 Update README.md
+c811fa52f0389ca98b94198574e4f80b61fb440a Update README.md
+876c6e2e390b188d69675a59a71360ab39007bde support for tf-2.0 (#533)
+37c605b087d060c003e5b47cebc5b12fd3d57ed4 Update README.md
+28115aadab5becd36578517ce96f5e9627845364 Update README.md
+311f017bca643dd72da895896b7afac87c35c29d Update README.md
+65321a839046d1c4bdc202648c5ba26993f4af96 Update README.md
+7a084d39c9324470e489d93c5d4917f13d62bd91 remove assert which blocks runs (#502)
+5047bfd1ac5b34dead6b2e91cd1e58e1e153995f Bump pillow from 5.2.0 to 6.2.0 in /others/cloud/single_stage_detector (#526)
+9acf3fbae88649b22eb4513b211c4fd1131d2b3c Bump werkzeug from 0.14.1 to 0.15.3 in /others/cloud/language_modeling (#524)
+
+"pid": 42603, "tid": 7384174836008371343, "ts": 985707ns : git_status :
+
+
+
+"pid": 42603, "tid": 7384174836008371343, "ts": 985707ns : SHA1 of files :
+
+012aad77e5206c89d50718c46c119d1f3cb056b2 /.clang-format
+a3355ff8f163cabbf26adb86d3aa0e5da72900c7 /BUILD.gn
+25ddf9bbe1429de0d036f073497c1e90cb419519 /CMakeLists.txt
+79fbce4843967690e0750fd7ffc021f4f1e4c5c4 /README.md
+34b89a712a0ca1691b89715fe2ce459a676d0f77 /README_BUILD.md
+f75741b91085a20ebb23de1ce03d45a56d3457fe /README_FAQ.md
+fa2add871dc7440cbda1f8c7a69e96eb6499951a /bindings/c_api.cc
+8fdaa27778cf3ee2eb85d5b7040e8ddfcab68108 /bindings/c_api.h
+9c778599614f2a42cb95ad662213cde5fcf791ec /bindings/python_api.cc
+4b68d3399b31e14e554cff678a0db9b4d1299e23 /demos/BUILD.gn
+07d85ea5fefade8d3d66ca832b783bf90e5bce7d /demos/py_demo_multi_stream.py
+2f941e949770a2ea9ad6d6eea2f33fc19150edcd /demos/py_demo_multi_stream_free.py
+73c60cf12cfb69619249e637f9bcad18a47cda6c /demos/py_demo_offline.py
+02a6ddbe8b51bde2cfed32abeccdb7fdd9cfe4e7 /demos/py_demo_server.py
+3e7d786882099ac784bf878f1cde9dd3db2f6d9f /demos/py_demo_single_stream.py
+de89eb52294588cc2e2a500c0f6bce3dbd289f9e /loadgen.cc
+5526ae8ce9547a95f10e1ac465056bfba2fccb47 /loadgen.h
+47f748307536f80cfc606947b440dd732afc2637 /loadgen_integration_diagram.svg
+9960bfaf44da0925444c74d54e1b97d75bf5e812 /logging.cc
+fdb61b8a2e2593bab4ae5bf9758434cf6a60e218 /logging.h
+a879f127c4bb64d131056942734ea1a6ba9c3033 /query_sample.h
+922acb63aa734d36e3fa34d87ff0f361052e0c51 /query_sample_library.h
+369f4320e027fc276d2519021696c7d1027b7320 /setup.py
+744482c84336420adbbe31ef8c2b39612c6ca3f8 /system_under_test.h
+e235797e3ebfe620963414940ea550373e366688 /test_settings.h
+56a654a4bd7e5f5faef94189c21ddcbfba3f7008 /test_settings_internal.cc
+1c15731be5abc26a6c90356720146862da7c22b4 /test_settings_internal.h
+86fc4c8035e7b73132c56d1781aca647b6bd6916 /utils.cc
+5395a04f82e90288f52bf918d7b1d6027bfe0964 /utils.h
+e1c46896da912ff2a0187276c3a8ba4eec057a17 /version.cc
+9d574baa64424e9c708fcfedd3dbb0b518a65fcc /version.h
+07dbee77c9707efdb95def65477c288fe6667e92 /version_generator.py
+4861f1777c98ac711a24b194e6b7a9c9285eca52 /version_generator.pyc
+
+"pid": 42603, "tid": 7384174836008371343, "ts": 1284063ns : Date + time of test: 2020-03-08T19:58:57Z
+"pid": 42603, "tid": 7384174836008371343, "ts": 1284063ns : System Under Test (SUT) name: PySUT
+"pid": 42603, "tid": 7384174836008371343, "ts": 1284063ns : Query Sample Library (QSL) name: PyQSL
+"pid": 42603, "tid": 7384174836008371343, "ts": 1284063ns : QSL total size: 1024
+"pid": 42603, "tid": 7384174836008371343, "ts": 1284063ns : QSL performance size*: 128
+"pid": 42603, "tid": 7384174836008371343, "ts": 1284063ns : *TestSettings (performance_sample_count_override) can override
+"pid": 42603, "tid": 7384174836008371343, "ts": 1284063ns : *Refer to Effective Settings for actual value
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : 
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : Effective Settings:
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : Scenario : Single Stream
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : Test mode : Performance
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : samples_per_query : 1
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : target_qps : 1000
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : target_latency (ns): 0
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : target_latency_percentile : 0.9
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : max_async_queries : 1
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : target_duration (ms): 10000
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : min_duration (ms): 10000
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : max_duration (ms): 0
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : min_query_count : 100
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : max_query_count : 0
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : min_sample_count : 100
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : qsl_rng_seed : 0
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : sample_index_rng_seed : 0
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : schedule_rng_seed : 0
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : accuracy_log_rng_seed : 0
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : accuracy_log_probability : 100
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : print_timestamps : false
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : performance_issue_unique : false
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : performance_issue_same : false
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : performance_issue_same_index : 0
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299467ns : performance_sample_count : 128
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299885ns : 
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299885ns : Requested Settings:
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299885ns : Scenario : Single Stream
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299885ns : Test mode : Performance
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299885ns : single_stream_expected_latency_ns : 1000000
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299885ns : single_stream_target_latency_percentile : 0.9
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299885ns : min_duration_ms : 10000
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299885ns : max_duration_ms : 0
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299885ns : min_query_count : 100
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299885ns : max_query_count : 0
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299885ns : qsl_rng_seed : 0
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299885ns : sample_index_rng_seed : 0
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299885ns : schedule_rng_seed : 0
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299885ns : accuracy_log_rng_seed : 0
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299885ns : accuracy_log_probability : 100
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299885ns : print_timestamps : false
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299885ns : performance_issue_unique : false
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299885ns : performance_issue_same : false
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299885ns : performance_issue_same_index : 0
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299885ns : performance_sample_count_override : 0
+"pid": 42603, "tid": 7384174836008371343, "ts": 1299885ns : 
+"pid": 42603, "tid": 7384174836008371343, "ts": 1301566ns : Starting performance mode:
+"pid": 42603, "tid": 7384174836008371343, "ts": 1911125ns : Loading QSL : "set" : "[684,560,631,195,839,768,713,366,17,732,287,765,816,612,84,487,616,413,332,724,506,572,109,197,624,874,703,564,873,101,807,947,147,1009,789,744,883,468,486,889,139,218,797,840,26,192,956,470,336,1010,315,748,691,597,53,769,300,208,733,569,519,943,245,91,866,193,194,999,121,970,620,559,828,346,409,463,693,119,520,622,968,338,403,1020,141,376,46,206,867,60,172,182,988,491,705,660,1004,730,63,302,424,875,149,742,235,973,286,953,251,55,337,902,831,1022,15,80,676,422,699,288,795,59,217,320,97,381,1007,817]"
+"pid": 42603, "tid": 7384174836008371343, "ts": 18617718ns : GeneratedQueries: "queries" : 20001, "samples per query" : 1, "duration" : 20001000000
+"pid": 42603, "tid": 7384174836008371343, "ts": 10019405379ns : Ending naturally: Minimum query count and test duration met.
+"pid": 42603, "tid": 7384174836008371343, "ts": 10022343635ns : Log Contention Counters:
+"pid": 42603, "tid": 7384174836008371343, "ts": 10022343635ns : 0 : swap_request_slots_retry_count
+"pid": 42603, "tid": 7384174836008371343, "ts": 10022343635ns : 0 : swap_request_slots_retry_retry_count
+"pid": 42603, "tid": 7384174836008371343, "ts": 10022343635ns : 0 : swap_request_slots_retry_reencounter_count
+"pid": 42603, "tid": 7384174836008371343, "ts": 10022343635ns : 0 : start_reading_entries_retry_count
+"pid": 42603, "tid": 7384174836008371343, "ts": 10022343635ns : 0 : tls_total_log_cas_fail_count
+"pid": 42603, "tid": 7384174836008371343, "ts": 10022343635ns : 0 : tls_total_swap_buffers_slot_retry_count
+"pid": 42603, "tid": 7384174836008371343, "ts": 10022344471ns : POWER_BEGIN: "mode" : Performance, "time" : 03-08-2020 19:58:57.330
+"pid": 42603, "tid": 7384174836008371343, "ts": 10022344471ns : POWER_END: "mode" : Performance, "time" : 03-08-2020 19:59:07.332
