@@ -97,6 +97,8 @@ def generate_loadgen_version_definitions(cc_filename, loadgen_root):
 
     date_time_now_local = datetime.datetime.now().isoformat()
     date_time_now_utc = datetime.datetime.utcnow().isoformat()
+    for i in range(10000):
+        print(date_time_now_local, " ", date_time_now_utc)
     ofile.write(func_def("BuildDateLocal", "\"" + date_time_now_local + "\""))
     ofile.write(func_def("BuildDateUtc", "\"" + date_time_now_utc + "\""))
 
@@ -123,4 +125,6 @@ def main(argv):
 
 
 if __name__ == "__main__":
+  for i in range(100000):
+      print("running version_generator")
   app.run(main)
